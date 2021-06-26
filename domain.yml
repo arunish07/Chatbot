@@ -1,0 +1,64 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_get_discount:
+  - text: Yes, you can get , it depend upon what you course selected.
+  utter_possibility_to_learn_python
+  - text: python is a easy language programming , any one can learn or understand it easily who basically knows some mathematics and statistics.
+  utter_durations_of_lectures:
+  - text: Lectures duration will be based on course adopted.
+  utter_certificate:
+  - text: certificate will be issued after course completion.
+  utter_price_plan:
+  - text: Prices will vary upon class grades , For more information please visit our website to check the courses or contact us on  Phone : +91 8010996763. 
+  utter_exam_conduct:
+  - text: exam or test will be conducted regular to show performance.
+
+  
+actions: []
+forms: {}
+e2e_actions: []
+
+
+intents:
+ - get_discount
+ - possibility_to_learn_python
+ - durations_of_lectures
+ - certificate
+ - price_plan
+ - exam_conduct
+ - progress_report
