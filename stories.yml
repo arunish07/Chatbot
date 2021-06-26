@@ -1,0 +1,45 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: cky information 3
+  steps:
+  - intent: get_discount
+  - action: Yes, you can get
+  - intent: possibility_to_learn_python
+  - action: Yes
+  - intent: Lectures_duration
+  - action: based_on_course_adopted
+  - intent: certificate_offered
+  - action: Yes
+  - intent: price_plan
+  - action: Prices will vary upon class grades
+  - intent: exam_conduct
+  - action: exam or test will be conducted regular
